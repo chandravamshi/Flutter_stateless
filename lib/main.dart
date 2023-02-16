@@ -12,20 +12,60 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 50.0,
                   backgroundImage: AssetImage('images/zebra.jpeg'),
                 ),
-                Text('Zebra',style: TextStyle(fontSize: 40.0,color: Colors.white,fontWeight: FontWeight.bold,fontFamily: 'CrimsonText'),),
-                Text('white and black',style: TextStyle(fontFamily: 'Satisfy',color: Colors.teal.shade100,fontSize: 20.0,letterSpacing: 2.5,fontWeight: FontWeight.bold),)
-                Container(
-                  child: Row(
-                    children: [
-                      Icon()
-                    ],
+                Text(
+                  'I am Zebra Darling',
+                  style: TextStyle(
+                      fontSize: 40.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'CrimsonText'),
+                ),
+                SizedBox(
+                  height: 20.0,
+                  child: Divider(
+                    color: Colors.teal.shade100,
                   ),
-                )
+                  width: 150.0,
+                ),
+                Text(
+                  'white and black, stone age',
+                  style: TextStyle(
+                      fontFamily: 'Satisfy',
+                      color: Colors.teal.shade100,
+                      fontSize: 20.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold),
+                ),
+                Card(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(Icons.phone, color: Colors.teal),
+                    title: Text('1234 567 890',
+                        style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20.0)),
+                  ),
+                ),
+                Card(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(Icons.email, color: Colors.teal),
+                    title: Text('zebra@stripes.com',
+                        style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20.0)),
+                  ),
+                ),
               ],
             ),
           )),
